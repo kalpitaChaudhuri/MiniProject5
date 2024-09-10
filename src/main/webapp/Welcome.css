@@ -14,12 +14,12 @@ body {
 
 .welcome-wrapper {
 	position: relative;
-	top:200px;
+	top:40px;
 	max-width: 400px;
 	margin: 100px auto; 
 	padding: 30px;
-	background-color: #FFFAE5; /* Soft golden */
-	border: 1px solid #FFC499; /* Warm brown */
+	background-color: #FFFAE5;
+	border: 1px solid #FFC499;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 }
@@ -32,8 +32,8 @@ body {
 .welcome-header h1 {
   font-size: 24px;
   font-weight: 600;
-  color: #FF9900;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #FF9900;
 }
 
 .button-container {
@@ -42,7 +42,7 @@ body {
 }
 
 .btn {
-  width: 45%;
+  width: 190px;
   height: 40px;
   font-size: 16px;
   font-weight: 500;
@@ -52,7 +52,7 @@ body {
   background-color: #FFC080;
   color: #FFFFFF;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .btn:hover {
@@ -83,7 +83,7 @@ body {
   color: white;
 }
 
-/* Font styles */
+
 h2, h3, h4, h5, h6 {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
