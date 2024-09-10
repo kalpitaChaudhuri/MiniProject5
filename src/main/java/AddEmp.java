@@ -39,7 +39,7 @@ public class AddEmp extends HttpServlet {
 
         em.persist(emp);
         et.commit();
-        req.getRequestDispatcher("Welcome.html").include(req, resp);
         em.close();
+        req.getRequestDispatcher("Welcome.html").include(req, resp);
 	}
 }
