@@ -15,6 +15,9 @@ body {
 }
 
 .container {
+  position: relative;
+  top: 10px;
+  bottom: 20px;
   max-width: 500px;
   height: auto;
   margin: 60px auto;
@@ -34,6 +37,11 @@ h1 {
     color: #FF9900;
 }
 
+.form-wrapper {
+    overflow-y: auto;
+    max-height: 400px; /* adjust as needed */
+}
+
 .form-group {
     margin-bottom: 10px;
     max-width: 400px;
@@ -46,7 +54,7 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="email"], select {
+input[type="text"], input[type="email"], input[type="number"], select {
     width: 100%;
     max-width: 400px; 
     height: 40px;
@@ -76,3 +84,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #FFA070;
 }
+
