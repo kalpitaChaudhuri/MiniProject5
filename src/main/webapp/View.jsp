@@ -1,5 +1,5 @@
 <%@page import="java.util.List"%>
-<%@ page import="my.Employees" %>
+<%@ page import="my.Employees"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Employee Details</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
 body {
@@ -36,7 +37,7 @@ table {
 	overflow: hidden;
 	margin-bottom: 20px;
 	margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
 }
 
 th, td {
@@ -55,7 +56,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-   background-color: #FFD699;
+	background-color: #FFD699;
 }
 
 tr:nth-child(odd) {
@@ -66,95 +67,103 @@ caption {
 	font-size: 20px;
 	margin: 10px;
 	color: #FF6600;
-	text-shadow: 
-        1px 1px 0 #808080, 
-        -1px -1px 0 #FF6600,  
-        1px -1px 0 #FFC499, 
-        -1px 1px 0 #FF6600;
+	text-shadow: 1px 1px 0 #808080, -1px -1px 0 #FF6600, 1px -1px 0 #FFC499,
+		-1px 1px 0 #FF6600;
 }
 
 .icon-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
 }
 
 .icon-button i {
-    font-size: 16px; 
-    color: #FF9900;
-    vertical-align: middle;
+	font-size: 16px;
+	color: #FF9900;
+	vertical-align: middle;
 }
 
-.delete-btn {
-	width: 200px; 
-    height: 50px;
-    background-color: #FF9900;
-    color: #fff;
-    border: none;
-    font-family: 'Pacifico';
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px auto; 
-    display: block;
-    text-align: center; 
-    line-height: 50px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
-.delete-btn:hover {
+.btn {
+	width: 200px;
+	height: 50px;
+	background-color: #FF9900;
+	color: #fff;
+	border: none;
+	font-family: 'Pacifico';
+	font-weight: 700;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 20px auto;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	text-decoration: none;
+	margin: 0 50px;
+}
+
+.btn:hover {
 	background-color: #e68a00;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 </style>
 </head>
 <body>
-<div>
-	<table>
-		<caption>
-			<b>Employee Details</b>
-		</caption>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Email</th>
-			<th>Salary</th>
-			<th>Department</th>
-			<th></th>
-		</tr>
-		  <%
+	<div>
+		<table>
+			<caption>
+				<b>Employee Details</b>
+			</caption>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Salary</th>
+				<th>Department</th>
+				<th></th>
+			</tr>
+			<%
 		  List<Employees> employeeList = (List<Employees>)request.getAttribute("employeeList");
 
 		              if (employeeList != null) {
 		                  for (Employees emp : employeeList) {
 		  %>
-        <tr>
-            <td><%= emp.getId() %></td>
-            <td><%= emp.getName() %></td>
-            <td><%= emp.getAge() %></td>
-            <td><%= emp.getEmail() %></td>
-            <td><%= emp.getSalary() %></td>
-            <td><%= emp.getDepartment() %></td>
-            <td><button class="icon-button"><i class="fa-regular fa-pen-to-square"></i></button></td>
-        </tr>
-       <%
+			<tr>
+				<td><%= emp.getId() %></td>
+				<td><%= emp.getName() %></td>
+				<td><%= emp.getAge() %></td>
+				<td><%= emp.getEmail() %></td>
+				<td><%= emp.getSalary() %></td>
+				<td><%= emp.getDepartment() %></td>
+				<td><button class="icon-button">
+						<i class="fa-regular fa-pen-to-square"></i>
+					</button></td>
+			</tr>
+			<%
                 }
             } else {
         %>
-        <tr>
-            <td colspan="6">No employee details available</td>
-        </tr>
-        <%
+			<tr>
+				<td colspan="7">No employee details available</td>
+			</tr>
+			<%
             }
         %>
-	</table>
-	<a href="" class="delete-btn">Delete Employee</a>
+		</table>
+		<div class="button-container">
+		 <a	href="Welcome.html" class="btn">Home</a>
+		 <a href="Delete.jsp" class="btn">Delete Employee</a>
+		</div>
 	</div>
 </body>
 </html>

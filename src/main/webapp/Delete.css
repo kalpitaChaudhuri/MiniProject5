@@ -1,0 +1,97 @@
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-image: url('https://www.shutterstock.com/image-photo/top-view-wood-office-desk-260nw-1686005722.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: background 0.5s ease-in-out;
+}
+
+.welcome-wrapper {
+  position: relative;
+  top: 40px;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #FFFAE5;
+  border: 1px solid #FFC499;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #FF9900;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 190px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid thin;
+  border-radius: 12px;
+  border-color: #333333;
+  background-color: #FFC080;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #FFA070;
+}
+
+.add-employee-btn {
+  background-color: #CCCCCC;
+  font-family: Pacifico; 
+  color: #032B44; 
+  font-weight: 700;
+}
+
+.add-employee-btn:hover {
+  background-color: #333333;
+  color: white;
+}
+
+.employee-details-btn {
+  background-color: #CCCCCC;
+  font-family: Pacifico; 
+  color: #032B44;
+  font-weight: 700;
+}
+
+.employee-details-btn:hover {
+  background-color: #333333;
+  color: white;
+}
+
+
+h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+p, span, a {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+}
