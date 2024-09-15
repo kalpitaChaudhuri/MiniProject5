@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Employee Details</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
@@ -82,8 +82,8 @@ caption {
 }
 
 .icon-button i {
-    font-size: 20px; /* Adjust size as needed */
-    color: #FF9900; /* Color of the icon */
+    font-size: 16px; 
+    color: #FF9900;
     vertical-align: middle;
 }
 
