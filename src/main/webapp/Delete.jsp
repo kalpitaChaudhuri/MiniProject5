@@ -23,9 +23,11 @@
         <label for="employeeId">Enter Employee ID:</label>
         <input type="text" id="employeeId" name="employeeId" required>
       </div>
+      <div class="button-container">
       <button type="submit" class="btn" onclick="confirmDelete(event)">Delete</button>
+      <a href="View.jsp" class="btn">Back</a>
+    </div>
     </form>
-    <a href="View.jsp" class="btn">Back</a>
   </div>
 </body>
 </html>
