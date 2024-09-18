@@ -5,10 +5,10 @@
   <link rel="stylesheet" href="Delete.css">
   <script>
     function confirmDelete(event) {
-      event.preventDefault(); // Prevent the form from submitting immediately
+      event.preventDefault();
       const confirmed = confirm("Are you sure you want to delete this employee?");
       if (confirmed) {
-        document.getElementById("delete-form").submit(); // Submit the form if confirmed
+        document.getElementById("delete-form").submit();
       }
     }
   </script>
@@ -25,7 +25,7 @@
       </div>
       <div class="button-container">
       <button type="submit" class="btn" onclick="confirmDelete(event)">Delete</button>
-      <a href="View.jsp" class="btn">Back</a>
+      <a href="View" class="btn">Back</a>
     </div>
     </form>
   </div>

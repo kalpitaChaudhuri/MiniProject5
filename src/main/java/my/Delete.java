@@ -28,14 +28,13 @@ public class Delete extends HttpServlet {
         Employees emp = em.find(Employees.class, idStr);
         if (emp != null) {
             em.remove(emp);
-            et.commit();
         }
-        EntityManager em2 = emf.createEntityManager();
-        Query query = em2.createQuery("FROM Employees", Employees.class);
-        List<Employees> employeeList = query.getResultList();
+        et.commit();
+        //Query query = em.createQuery("FROM Employees", Employees.class);
+        //List<Employees> employeeList = query.getResultList();
 
-        req.setAttribute("employeeList", employeeList);
-        req.getRequestDispatcher("View.jsp").forward(req, resp);
-        resp.sendRedirect("View.jsp");
+        //req.setAttribute("employeeList", employeeList);
+        //req.getRequestDispatcher("View.jsp").forward(req, resp);
+        resp.sendRedirect("View");
 	}
 }

@@ -16,13 +16,13 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ViewEmp extends HttpServlet {
 	EntityManagerFactory emf=Persistence.createEntityManagerFactory("shelly");
 	EntityManager em=emf.createEntityManager();
-	
-@Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	 Query query = em.createQuery("FROM Employees", Employees.class);
-     List<Employees> employees = query.getResultList();
-     
-     req.setAttribute("employeeList", employees);
-     req.getRequestDispatcher("View.jsp").forward(req, resp);
-}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Query query = em.createQuery("FROM Employees", Employees.class);
+		List<Employees> employees = query.getResultList();
+
+		req.setAttribute("employeeList", employees);
+		req.getRequestDispatcher("View.jsp").forward(req, resp);
+	}
 }
