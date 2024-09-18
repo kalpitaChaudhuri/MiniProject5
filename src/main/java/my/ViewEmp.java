@@ -23,6 +23,8 @@ public class ViewEmp extends HttpServlet {
 		List<Employees> employees = query.getResultList();
 
 		req.setAttribute("employeeList", employees);
+		em.close();
+		System.out.println("hll");
 		req.getRequestDispatcher("View.jsp").forward(req, resp);
 	}
 }

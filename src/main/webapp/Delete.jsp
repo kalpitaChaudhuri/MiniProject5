@@ -18,7 +18,7 @@
     <div class="delete-header">
       <h1>Delete Employee</h1>
     </div>
-    <form action="Delete" method="post">
+    <form action="det">
       <div class="input-container">
         <label for="employeeId">Enter Employee ID:</label>
         <input type="text" id="employeeId" name="employeeId" required>

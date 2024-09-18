@@ -14,15 +14,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/Delete")
+@WebServlet("/det")
 public class Delete extends HttpServlet {
-	EntityManagerFactory emf=Persistence.createEntityManagerFactory("shelly");
-	EntityManager em=emf.createEntityManager();
-	EntityTransaction et=em.getTransaction();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String idStr = req.getParameter("id");
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("shelly");
+		 
+		EntityManager em=emf.createEntityManager();
+		EntityTransaction et=em.getTransaction();
+		
+		System.out.println(emf);
+		String idStr = req.getParameter("employeeId");
+		System.out.println(idStr);
         
         et.begin();
         Employees emp = em.find(Employees.class, idStr);
