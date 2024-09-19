@@ -24,7 +24,6 @@ public class ViewEmp extends HttpServlet {
 
 		req.setAttribute("employeeList", employees);
 		em.close();
-		System.out.println("hll");
 		req.getRequestDispatcher("View.jsp").forward(req, resp);
 	}
 }
